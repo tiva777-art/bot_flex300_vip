@@ -2420,7 +2420,7 @@ async def run_sendonly_process(update: Update, context: ContextTypes.DEFAULT_TYP
                         await update_status(result_text + "\n❌ فشلت جميع محاولات الحذف، متابعة المحاولات رغم ذلك...")
                 else:
                     await update_status(result_text + "\n⚠️ لا يوجد توكن للحذف، قد يفشل لاحقاً.")
-                await asyncio.sleep(60)
+                await asyncio.sleep(10)
 
     if not success:
         sendonly_stats["total_attempts"] += 1
